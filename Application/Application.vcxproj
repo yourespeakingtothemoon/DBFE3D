@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -128,7 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -144,7 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)Engine;$(SolutionDir)ThirdParty/rapidJSON/include;$(SolutionDir)ThirdParty/box2D/include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>

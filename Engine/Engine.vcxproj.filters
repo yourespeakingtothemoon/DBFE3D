@@ -170,6 +170,9 @@
     <ClCompile Include="Framework\Components\CameraComponent.cpp">
       <Filter>Source\Model\Framework\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\ThirdParty\glad\src\glad.c">
+      <Filter>Source\View\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathUtils.h">

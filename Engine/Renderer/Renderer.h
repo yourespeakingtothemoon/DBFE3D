@@ -3,11 +3,14 @@
 #include "Math\Color.h"
 #include "Math\Rectangle.h"
 #include "Math/Mat3x3.h"
+#include <glad/glad.h> 
+#include <SDL.h> 
 
 #include "Texture.h"
 
 struct SDL_Renderer;
 struct SDL_Window;
+
 
 
 namespace dbf
@@ -45,7 +48,7 @@ namespace dbf
 
 		friend class Text;
 		friend class Texture;
-		
+		SDL_GLContext m_context;
 
 	private:
 		int m_width = 0;
@@ -59,6 +62,7 @@ namespace dbf
 		Mat3x3 m_viewport;
 
 		SDL_Window* m_window{ nullptr };
+		
 	};
 
 }
