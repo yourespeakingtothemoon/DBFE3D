@@ -109,7 +109,7 @@ namespace dbf
 
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 
-		SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, angle, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
+		//SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, angle, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
 	}
 
 	void Renderer::draw(std::shared_ptr<Texture> texture, const Transform& transform, const Vector2& registration)
@@ -129,7 +129,7 @@ namespace dbf
 
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 		//transform.rotation = angle
-		SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
+		//SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
 	}
 
 	void Renderer::draw(std::shared_ptr<Texture> texture, const Rectangle& source, const Transform& transform, const Vector2& registration, bool flipH)
@@ -157,6 +157,6 @@ namespace dbf
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 
 		SDL_RendererFlip flip = (flipH) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
-		SDL_RenderCopyEx(m_renderer, texture -> m_texture, &src, &dest, math::RadtoDeg(mx.GetRotation()), &center, flip);
+		//SDL_RenderCopyEx(m_renderer, texture -> m_texture, &src, &dest, math::RadtoDeg(mx.GetRotation()), &center, flip);
 	}
 }

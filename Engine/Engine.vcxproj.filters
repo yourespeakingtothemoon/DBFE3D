@@ -173,6 +173,15 @@
     <ClCompile Include="..\ThirdParty\glad\src\glad.c">
       <Filter>Source\View\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer\Shader.cpp">
+      <Filter>Source\View\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Program.cpp">
+      <Filter>Source\View\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Material.cpp">
+      <Filter>Source\View\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathUtils.h">
@@ -327,6 +336,15 @@
     </ClInclude>
     <ClInclude Include="Framework\Components\CameraComponent.h">
       <Filter>Source\Model\Framework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Shader.h">
+      <Filter>Source\View\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Program.h">
+      <Filter>Source\View\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Material.h">
+      <Filter>Source\View\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

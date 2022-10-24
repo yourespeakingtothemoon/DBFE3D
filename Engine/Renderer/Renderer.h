@@ -3,10 +3,10 @@
 #include "Math\Color.h"
 #include "Math\Rectangle.h"
 #include "Math/Mat3x3.h"
+#include "Resource/Resource.h"
+#include "Texture.h"
 #include <glad/glad.h> 
 #include <SDL.h> 
-
-#include "Texture.h"
 
 struct SDL_Renderer;
 struct SDL_Window;
@@ -15,6 +15,7 @@ struct SDL_Window;
 
 namespace dbf
 {
+	class Texture;
 	struct Transform;
 	struct Rectangle;
 	class Renderer
