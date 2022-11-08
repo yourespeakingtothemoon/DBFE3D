@@ -11,6 +11,8 @@ namespace dbf
 	const uint32_t key_right = SDL_SCANCODE_RIGHT;
 	const uint32_t key_escape = SDL_SCANCODE_ESCAPE;
 	const uint32_t key_enter = SDL_SCANCODE_RETURN;
+	const uint32_t key_pageu = SDL_SCANCODE_PAGEUP;
+	const uint32_t key_paged = SDL_SCANCODE_PAGEDOWN;
 
 	//WASD
 	const uint32_t key_w = SDL_SCANCODE_W;

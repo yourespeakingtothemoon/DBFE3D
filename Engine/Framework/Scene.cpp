@@ -1,5 +1,8 @@
 #include "Scene.h"
+#include "Factory.h"
+#include "Engine.h"
 #include <algorithm>
+#include <iostream>
 
 namespace dbf 
 {
@@ -34,6 +37,15 @@ namespace dbf
 
 	void Scene::draw(Renderer& renderer)
 	{
+		// get camera / set renderer view/projection 
+		auto camera = getActorByName("Camera");
+		if (camera)
+		{
+			g_renderer.setView(camera->getComponent<CameraComponent>()->GetView());
+			g_renderer.setProjection(camera->getComponent<CameraComponent>()->GetProjection());
+		}
+
+		// draw actors 
 		for (auto& actor : m_actors)
 		{
 			actor->draw(renderer);

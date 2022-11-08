@@ -32,6 +32,7 @@ namespace dbf
 		if (!vertex_shader.empty())
 		{
 			auto vshader = g_resourceManager.Get<dbf::Shader>(vertex_shader, GL_VERTEX_SHADER);
+			LOG("Vert Shader added successfully");
 			AddShader(vshader);
 		}
 
@@ -43,6 +44,8 @@ namespace dbf
 			auto fshader = g_resourceManager.Get<dbf::Shader>(fragment_shader, (void*)GL_FRAGMENT_SHADER);
 			AddShader(fshader);
 		}
+
+		Link();
 
 		return true;
 	}
@@ -150,8 +153,10 @@ namespace dbf
 		if (uniform == m_uniforms.end())
 		{
 			// get uniform in program 
-
+			this->Use();
+			//glUseProgram(m_program);
 			GLint location = glGetUniformLocation(m_program, name.c_str());
+			std::cout << location << std::endl;
 			if (location == -1)
 			{
 

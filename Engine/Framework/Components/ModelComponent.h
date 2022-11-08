@@ -3,7 +3,9 @@
 
 namespace dbf
 {
+	class Renderer;
 	class Model;
+	class Material;
 
 	class ModelComponent : public RenderComponent
 	{
@@ -22,6 +24,7 @@ namespace dbf
 		//to model for modelComponent
 	public:
 		std::shared_ptr<Model> m_model;
+		std::shared_ptr<Material> m_material;
 		
 	};
 }

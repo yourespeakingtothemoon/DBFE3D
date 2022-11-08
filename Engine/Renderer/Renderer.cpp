@@ -10,9 +10,7 @@ namespace dbf
 {
 	void Renderer::init()
 	{
-		//view
-		m_view = Mat3x3::identity;
-		m_viewport = Mat3x3::identity;
+		
 		SDL_Init(SDL_INIT_VIDEO);
 		//Images
 		IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
@@ -29,19 +27,18 @@ namespace dbf
 		IMG_Quit();
 	}
 
-	void Renderer::generateWindow(const char* name, int width, int height)
+	void Renderer::generateWindow(const char* name, int width, int height, bool fullscreen)
 	{
 		m_width = width;
 		m_height = height;
-		int fullscreen=0;
+
 		int flags = (fullscreen) ? SDL_WINDOW_FULLSCREEN : (SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 
-		m_window = SDL_CreateWindow(name, 100, 100, width, height, SDL_WINDOW_OPENGL
-			| flags);
+		m_window = SDL_CreateWindow(name, 100, 100, width, height, SDL_WINDOW_OPENGL | flags);
 
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
-		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
 		SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
@@ -57,7 +54,8 @@ namespace dbf
 
 	void Renderer::openFrame()
 	{
-		glClearColor(1.0f, 0.313f, 0.403f, 1); //1,.313,.403 or 255,80,103 is drachenblut red
+		//glClearColor(1.0f, 0.313f, 0.403f, 1); //1,.313,.403 or 255,80,103 is drachenblut red
+		glClearColor(0, 0, 0, 1); //black
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
@@ -90,11 +88,11 @@ namespace dbf
 		SDL_RenderDrawPointF(m_renderer, v.x, v.y);
 	}
 
-	void Renderer::draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle, const Vector2& scale, const Vector2& registration)
-	{
+	//void Renderer::draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle, const Vector2& scale, const Vector2& registration)
+	//{
 
-
-		Vector2 size = texture->GetSize();
+		/*
+		Vector2 size = texture.get()->getSize()
 		size = size * scale;
 
 		Vector2 origin = size * registration;
@@ -112,9 +110,9 @@ namespace dbf
 		//SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, angle, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
 	}
 
-	void Renderer::draw(std::shared_ptr<Texture> texture, const Transform& transform, const Vector2& registration)
-	{
-		Vector2 size = texture->GetSize();
+	//void Renderer::draw(std::shared_ptr<Texture> texture, const Transform& transform, const Vector2& registration)
+	//{
+		/*Vector2 size = texture->GetSize();
 		size = size * transform.scale;
 
 		Vector2 origin = size * registration;
@@ -127,14 +125,14 @@ namespace dbf
 		dest.w = (int)(size.x);// !! set to size x 
 		dest.h = (int)(size.y);// !! set to size y 
 
-		SDL_Point center{ (int)origin.x, (int)origin.y };
+		SDL_Point center{ (int)origin.x, (int)origin.y };*/
 		//transform.rotation = angle
 		//SDL_RenderCopyEx(m_renderer, texture->m_texture, nullptr, &dest, transform.rotation, &center, SDL_FLIP_NONE); //SDL_FLIP_NONE //SDL_FLIP_HORIZONTAL //SDL_FLIP_VERTICAL
-	}
+	//}
 
-	void Renderer::draw(std::shared_ptr<Texture> texture, const Rectangle& source, const Transform& transform, const Vector2& registration, bool flipH)
-	{
-		Mat3x3 mx = m_viewport * m_view * transform.matrix;
+	//void Renderer::draw(std::shared_ptr<Texture> texture, const Rectangle& source, const Transform& transform, const Vector2& registration = Vector2{ 0.5f, 0.5f }, bool flipH = false)
+	//{
+		/*Mat3x3 mx = m_viewport * m_view * transform.matrix;
 
 		Vector2 size = Vector2{ source.w, source.h };
 		size = size * mx.GetScale();
@@ -157,6 +155,6 @@ namespace dbf
 		SDL_Point center{ (int)origin.x, (int)origin.y };
 
 		SDL_RendererFlip flip = (flipH) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
-		//SDL_RenderCopyEx(m_renderer, texture -> m_texture, &src, &dest, math::RadtoDeg(mx.GetRotation()), &center, flip);
-	}
+		//SDL_RenderCopyEx(m_renderer, texture -> m_texture, &src, &dest, math::RadtoDeg(mx.GetRotation()), &center, flip);*/
+	//}
 }

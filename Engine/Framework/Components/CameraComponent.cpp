@@ -4,28 +4,26 @@
 
 namespace dbf
 {
-    void CameraComponent::init()
-    {
-        setViewport(viewport_size);
-    }
-
+   
     void CameraComponent::update()
     {
-        // create camera view matrix 
-        Mat3x3 mxTranslation = Mat3x3::createTranslation(-m_owner->m_transform.position);
-        Mat3x3 mxRotation = Mat3x3::createRotate(-math::DegToRad(m_owner->m_transform.rotation));
+        //x Axis
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_left) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.x -= speed * g_time.deltaTime;
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_right) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.x += speed * g_time.deltaTime;
+        // y Axis
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_up) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.y += speed * g_time.deltaTime;
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_down) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.y -= speed * g_time.deltaTime;
+        //z Axis
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_paged) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.z -= speed * g_time.deltaTime;
+        if (dbf::g_inputSystem.queryKeyState(dbf::key_pageu) == dbf::InpSystem::keyState::Held) m_owner->m_transform.position.z += speed * g_time.deltaTime;
+        m_view = glm::lookAt(m_owner->m_transform.position, m_owner->m_transform.position + m_owner->m_transform.getForward(), glm::vec3{ 0, 1, 0 });
 
-        m_view = mxTranslation * mxRotation;
-
-        g_renderer.setViewMatrix(m_view);
     }
 
-    void CameraComponent::setViewport(const Vector2& size)
+    void CameraComponent::SetPerspective(float fov, float aspectRatio, float near, float far)
     {
-        Mat3x3 mxTranslation = Mat3x3::createTranslation(size * 0.5f);
 
-        m_viewport = mxTranslation;
-        g_renderer.setViewportMatrix(m_viewport);
+        m_projection = glm::perspective(glm::radians(fov), aspectRatio, near, far);
     }
 
     bool CameraComponent::write(const rapidjson::Value& value) const
@@ -35,7 +33,22 @@ namespace dbf
 
     bool CameraComponent::read(const rapidjson::Value& value)
     {
-        READ_DATA(value, viewport_size);
+
+        float fov;
+        READ_DATA(value, fov);
+        float aspect_ratio;
+        if (!READ_DATA(value, aspect_ratio))
+        {
+
+            aspect_ratio = g_renderer.getWidth() / (float(g_renderer.getHeight()));
+
+        }
+        float near;
+        READ_DATA(value, near);
+        float far;
+        READ_DATA(value, far);
+
+        SetPerspective(fov, aspect_ratio, near, far);
 
         return true;
     }

@@ -9,7 +9,7 @@ namespace dbf
 
 	void TextComponent::draw(Renderer& renderer)
 	{
-		g_renderer.draw(m_texture, m_owner->m_transform, registration);
+		//g_renderer.draw(m_texture, m_owner->m_transform, registration);
 	}
 
 	void TextComponent::setText(const std::string& text)

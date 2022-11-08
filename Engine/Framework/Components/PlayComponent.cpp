@@ -12,7 +12,7 @@ namespace dbf
 	void PlayComponent::update()
 	{
 
-		if (atkOutput > 0) {
+		/*if (atkOutput > 0) {
 			atkOutput--;
 		}
 		
@@ -34,7 +34,7 @@ namespace dbf
 			if (component)
 			{
 				m_jumpCount+=1;
-				component->applyForce(Vector2::up * 800);
+				//component->applyForce(Vector2::up * 800);
 			}
 
 		}
@@ -65,9 +65,9 @@ namespace dbf
 				animComponent->setSequence("attack");
 				auto actor = dbf::Factory::instance().Create<dbf::Actor>("Hitbox");
 				if (!animComponent->getFlipHoriz()) {
-					actor->m_transform.position = { m_owner->m_transform.position + Vector2{64,0} };
+					//actor->m_transform.position = { m_owner->m_transform.position + Vector2{64,0} };
 				}if (animComponent->getFlipHoriz()) {
-					actor->m_transform.position = { m_owner->m_transform.position - Vector2{64,0} };
+					//actor->m_transform.position = { m_owner->m_transform.position - Vector2{64,0} };
 				}
 				actor->init();
 
@@ -127,19 +127,19 @@ namespace dbf
 		//update
 		m_owner->m_transform.position += direction * 300 * g_time.deltaTime;
 
-
+		*/
 
 	}
 	void PlayComponent::OnNotify(const Event& event)
 	{
-		if (event.name == "EVENT_DAMAGE")
+		/*if (event.name == "EVENT_DAMAGE")
 		{
 			health -= std::get<float>(event.eventData);
 			if (health <= 0)
 			{
 				//player die
 			}
-		}
+		}*/
 	}
 	bool PlayComponent::write(const rapidjson::Value& value) const
 	{
@@ -156,7 +156,7 @@ namespace dbf
 	void PlayComponent::enterCollide(Actor* other)
 	{
 
-		if (other->getTag() == "pyMagick")
+		/*if (other->getTag() == "pyMagick")
 		{
 			other->flipDestroy();
 			pyMagicka++;
@@ -179,15 +179,15 @@ namespace dbf
 		{
 			m_groundCount++;
 			m_jumpCount=0;
-		}
+		}*/
 	}
 	void PlayComponent::exitCollide(Actor* other)
 	{
-		if (other->getTag() == "Ground")
+		/*if (other->getTag() == "Ground")
 		{
 			m_groundCount--;
 			
-		}
+		}*/
 	}
 	void PlayComponent::attack(bool form)
 	{

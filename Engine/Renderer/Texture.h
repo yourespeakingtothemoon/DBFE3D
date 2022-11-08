@@ -3,7 +3,7 @@
 #include "Resource/Resource.h"
 #include "Renderer/Renderer.h"
 #include <string> 
-#include <glad/glad.h>
+
  
 struct SDL_Texture; 
 struct SDL_Surface;
@@ -23,7 +23,7 @@ public:
 
 	void bind() { glBindTexture(m_target, m_texture); }
 
-	Vector2 GetSize() const;
+	Vector2 getSize() const;
 
 	friend class Renderer;
 

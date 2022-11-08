@@ -182,6 +182,12 @@
     <ClCompile Include="Renderer\Material.cpp">
       <Filter>Source\View\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer\VertexBuffer.cpp">
+      <Filter>Source\View\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Components\CameraControl.cpp">
+      <Filter>Source\Model\Framework\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathUtils.h">
@@ -345,6 +351,12 @@
     </ClInclude>
     <ClInclude Include="Renderer\Material.h">
       <Filter>Source\View\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\VertexBuffer.h">
+      <Filter>Source\View\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Components\CameraControl.h">
+      <Filter>Source\Model\Framework\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

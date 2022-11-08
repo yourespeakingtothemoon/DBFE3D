@@ -62,6 +62,8 @@ namespace dbf
 	extern const uint32_t key_right;
 	extern const uint32_t key_escape;
 	extern const uint32_t key_enter;
+	extern const uint32_t key_pageu;
+	extern const uint32_t key_paged;
 	
 	extern const uint32_t key_w;
 	extern const uint32_t key_a;

@@ -6,11 +6,12 @@ namespace dbf
 {
 	Shader::~Shader()
 	{
-		if (m_shader!=0)
+		if (!m_shader)
 		{
 			glDeleteShader(m_shader);
 		}
 	}
+
 	bool Shader::Create(std::string filename, ...)
 	{
 		// get shader source from file
@@ -19,6 +20,7 @@ namespace dbf
 		if (!success)
 		{
 			LOG("error reading shader file %s.", filename.c_str());
+			return false;
 		}
 
 		// get shader type arguments

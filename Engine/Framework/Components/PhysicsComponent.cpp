@@ -6,7 +6,7 @@ namespace dbf
 	void PhysicsComponent::update()
 	{
 		velocity += acceleration * dbf::g_time.deltaTime;
-		m_owner->m_transform.position += velocity * dbf::g_time.deltaTime;
+		//m_owner->m_transform.position += velocity * dbf::g_time.deltaTime;
 		velocity *= damping;
 
 		acceleration = Vector2::zero;

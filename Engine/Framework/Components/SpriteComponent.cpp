@@ -9,7 +9,7 @@ namespace dbf
 	}
 	void SpriteComponent::draw(Renderer& renderer)
 	{
-		renderer.draw(m_texture, GetSource(), m_owner->m_transform, regi, flipHoriz);
+		//renderer.draw(m_texture, GetSource(), m_owner->m_transform, regi, flipHoriz);
 	}
 
 	bool SpriteComponent::write(const rapidjson::Value& value) const
@@ -28,8 +28,8 @@ namespace dbf
 		{
 			source.x = 0;
 			source.y = 0;
-			source.w = (int)m_texture->GetSize().x;
-			source.h = (int)m_texture->GetSize().y;
+			source.w = (int)m_texture->getSize().x;
+			source.h = (int)m_texture->getSize().y;
 		}
 
 		return true;

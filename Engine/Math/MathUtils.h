@@ -13,19 +13,18 @@
 #include <glm/gtx/euler_angles.hpp>
 #include <glm/gtc/quaternion.hpp>
 
-
 namespace math
 {
-	constexpr float Pi = 3.14159265359f;
-	constexpr float TwoPi = 6.28318530718f;
-	constexpr float HalfPi = 1.57079632679f;
+	constexpr float Pi = 3.14159265359f; // 180
+	constexpr float TwoPi = 6.28318530718f; // 360
+	constexpr float HalfPi = 1.57079632679f; // 90
 
 	constexpr float DegToRad(float degrees)
 	{
 		return degrees * (Pi / 180);
 	}
-	
-	constexpr float RadtoDeg(float radians)
+
+	constexpr float RadToDeg(float radians)
 	{
 		return radians * (180 / Pi);
 	}
@@ -38,6 +37,7 @@ namespace math
 
 		return value;
 	}
+
 	template <typename T>
 	T Lerp(T min, T max, float t)
 	{
@@ -45,16 +45,19 @@ namespace math
 
 		return min + ((max - min) * t);
 	}
+
 	template <typename T>
 	T Normalize(T value, T min, T max)
 	{
 		return (value - min) / (max - min);
 	}
+
 	template <typename T>
 	T Remap(T value, T inMin, T inMax, T outMin, T outMax)
 	{
 		return Lerp(outMin, outMax, Normalize(value, inMin, inMax));
 	}
+
 	template <typename T>
 	T mod(T numerator, T denominator)
 	{
@@ -75,7 +78,5 @@ namespace math
 
 		return value;
 	}
-
-	//int sqr(int v);
-	//inline int half(int v) { return v / 2; }
 }
+

@@ -22,7 +22,7 @@ namespace dbf
 
     void SpriteAnimComponent::draw(Renderer& renderer)
     {
-        renderer.draw(m_sequence->texture, GetSource(), m_owner->m_transform, regi, flipHoriz);
+        //renderer.draw(m_sequence->texture, GetSource(), m_owner->m_transform, regi, flipHoriz);
     }
 
     void SpriteAnimComponent::setSequence(const std::string& name)
@@ -43,7 +43,7 @@ namespace dbf
     Rectangle& SpriteAnimComponent::GetSource()
     {
         // calculate sequence source rect
-        Vector2 cellSize = m_sequence->texture->GetSize() / Vector2{ m_sequence->num_columns, m_sequence->num_rows };
+        Vector2 cellSize = m_sequence->texture->getSize() / Vector2{ m_sequence->num_columns, m_sequence->num_rows };
         int column = (frame - 1) % m_sequence->num_columns;
         int row = (frame - 1) / m_sequence->num_columns;
         source.x = (int)(column * cellSize.x);

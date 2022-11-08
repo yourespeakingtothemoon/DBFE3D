@@ -3,6 +3,7 @@
 #include "Core/Logger.h"
 #include <SDL.h> 
 #include <SDL_image.h> 
+#include <cstdarg> 
 
 namespace dbf
 {
@@ -90,7 +91,7 @@ namespace dbf
         return true;
     }
 
-    dbf::Vector2 Texture::GetSize() const
+    dbf::Vector2 Texture::getSize() const
     {
        /* SDL_Point point;
         //pass address of x and y
@@ -103,5 +104,25 @@ namespace dbf
     }
     void Texture::FlipSurface(SDL_Surface* surface)
     {
+        SDL_LockSurface(surface);
+
+        int pitch = surface->pitch; // row size 
+        uint8_t* temp = new uint8_t[pitch]; // intermediate buffer 
+        uint8_t* pixels = (uint8_t*)surface->pixels;
+
+        for (int i = 0; i < surface->h / 2; ++i) {
+            // get pointers to the two rows to swap 
+            uint8_t* row1 = pixels + i * pitch;
+            uint8_t* row2 = pixels + (surface->h - i - 1) * pitch;
+
+            // swap rows 
+            memcpy(temp, row1, pitch);
+            memcpy(row1, row2, pitch);
+            memcpy(row2, temp, pitch);
+        }
+
+        delete[] temp;
+
+        SDL_UnlockSurface(surface);
     }
 }

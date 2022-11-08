@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Serialization/Json.h" 
-
+#include "Renderer/Model.h"
 #include "Core/MemoryMgmt.h"
 #include "Core/File.h"
 #include "Core/Time.h"
@@ -9,6 +9,7 @@
 
 #include "Math/MathUtils.h"
 #include "Math/Random.h"
+#include "glm/glm.hpp"
 
 #include "Framework/Scene.h"
 #include "Framework/Game.h"
@@ -29,6 +30,7 @@
 #include "Framework/Components/TilemapComponent.h"
 #include "Framework/Components/CharComponent.h"
 #include "Framework/Components/CameraComponent.h"
+#include "Framework/Components/CameraControl.h"
 
 #include "Input/InputSystem.h"
 #include "Audio/AudioSystem.h"
@@ -39,9 +41,10 @@
 #include "Renderer/Text.h"
 #include "Renderer/Font.h"
 #include "Renderer/Texture.h"
-#include "Renderer/Model.h"
 #include "Renderer/Program.h"
 #include "Renderer/Material.h"
+#include "Renderer/Shader.h"
+#include "Renderer/VertexBuffer.h"
 
 
 #include <memory>

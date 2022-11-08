@@ -29,5 +29,17 @@
     <None Include="..\Build\Assets\Shaders\basic.prog">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Build\Assets\Scenes\basic.scn">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Ogre.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Spot.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\box.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

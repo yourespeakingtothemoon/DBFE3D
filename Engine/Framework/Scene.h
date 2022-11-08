@@ -8,7 +8,7 @@
 namespace dbf 
 {
 	//forward declarations
-	//class Actor;
+	class Actor;
 	class Renderer;
 	class Game;
 
