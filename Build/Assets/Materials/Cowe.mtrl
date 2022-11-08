@@ -1,6 +1,6 @@
 {
-   "program": "shaders/basic.prog",
-   "texture": "textures/spot.png",
+   "program": "Shaders/basic.prog",
+   "texture": "Textures/cowe.png",
    "ambient": [
      1,
      1,

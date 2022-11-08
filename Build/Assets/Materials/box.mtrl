@@ -1,6 +1,6 @@
 {
     "program":"shaders/basic.prog",
-    "texture":"textures/drachen.png",
+    "texture":"textures/llamabox2.png",
     "ambient":[
         1,
         1,

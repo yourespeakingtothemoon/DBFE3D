@@ -24,7 +24,63 @@
         {
           "type": "ModelComponent",
           "model_name": "Models/drachen.obj",
-          "material_name": "Materials/Ogre.mtrl"
+          "material_name": "Materials/Drachen.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "Cowe",
+      "transform": {
+        "position": [
+          5,
+          5,
+          5
+        ],
+        "scale": [
+          2,
+          2,
+          2
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/cowe.obj",
+          "material_name": "Materials/Cowe.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "box",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/cube.obj",
+          "material_name": "Materials/box.mtrl"
         }
       ]
     },
@@ -34,8 +90,8 @@
       "transform": {
         "position": [
           0,
-          0,
-          -4
+          5,
+          -20
         ]
       },
       "components": [

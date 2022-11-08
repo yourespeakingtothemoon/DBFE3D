@@ -32,13 +32,16 @@
     <None Include="..\Build\Assets\Scenes\basic.scn">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\Build\Assets\Materials\Ogre.mtrl">
+    <None Include="..\Build\Assets\Materials\Drachen.mtrl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\Build\Assets\Materials\Spot.mtrl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\Build\Assets\Materials\box.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Materials\Cowe.mtrl">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

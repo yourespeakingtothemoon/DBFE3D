@@ -76,7 +76,8 @@ int main(int argc, char** argv)
 		scene->init();
 		LOG("Scene Initialized...");
 	}
-
+	std::vector<dbf::Transform> rando;
+	
 
 	bool quit = false;
 
@@ -91,7 +92,11 @@ int main(int argc, char** argv)
 
 		scene->draw(dbf::g_renderer);
 		scene->getActorByName("Drachen")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 90 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime };
-
+		scene->getActorByName("Cowe")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime, 30 * dbf::g_time.deltaTime };
+		
+		scene->getActorByName("box")->m_transform.rotation += glm::vec3{dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime};
+		
+		
 		dbf::g_renderer.closeFrame();
 	}
 
