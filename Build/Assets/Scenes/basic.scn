@@ -38,9 +38,9 @@
           5
         ],
         "scale": [
-          2,
-          2,
-          2
+          1,
+          1,
+          1
         ],
         "rotation": [
           0,
@@ -51,8 +51,8 @@
       "components": [
         {
           "type": "ModelComponent",
-          "model_name": "Models/cowe.obj",
-          "material_name": "Materials/Cowe.mtrl"
+          "model_name": "Models/basshon.glb",
+          "material_name": "Materials/Dawg.mtrl"
         }
       ]
     },

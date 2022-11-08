@@ -29,6 +29,7 @@
   <ItemGroup>
     <None Include="..\Build\Assets\Materials\box.mtrl" />
     <None Include="..\Build\Assets\Materials\Cowe.mtrl" />
+    <None Include="..\Build\Assets\Materials\Dawg.mtrl" />
     <None Include="..\Build\Assets\Materials\Drachen.mtrl" />
     <None Include="..\Build\Assets\Materials\Spot.mtrl" />
     <None Include="..\Build\Assets\Scenes\basic.scn" />

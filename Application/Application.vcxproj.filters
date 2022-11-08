@@ -44,5 +44,8 @@
     <None Include="..\Build\Assets\Materials\Cowe.mtrl">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Build\Assets\Materials\Dawg.mtrl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
