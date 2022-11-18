@@ -6,6 +6,7 @@
 #include "Core/File.h"
 #include "Core/Time.h"
 #include "Core/Logger.h"
+#include "Core/Utilities.h"
 
 #include "Math/MathUtils.h"
 #include "Math/Random.h"
@@ -31,6 +32,7 @@
 #include "Framework/Components/CharComponent.h"
 #include "Framework/Components/CameraComponent.h"
 #include "Framework/Components/CameraControl.h"
+#include "Framework/Components/LightComponent.h"
 
 #include "Input/InputSystem.h"
 #include "Audio/AudioSystem.h"
@@ -51,6 +53,7 @@
 #include<variant>
 #include<vector>
 #include<list>
+#include<string>
 
 
 namespace dbf 

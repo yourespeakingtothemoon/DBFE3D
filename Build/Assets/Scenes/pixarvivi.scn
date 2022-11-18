@@ -1,0 +1,141 @@
+{
+  "actors": [
+    {
+      "type": "Actor",
+      "name": "Vivi",
+      "transform": {
+        "position": [
+          0,
+          10,
+          7
+        ],
+        "scale": [
+          2,
+          2,
+          2
+        ],
+        "rotation": [
+          0,
+          158,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/vivi2.glb",
+          "material_name": "Materials/vivi.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "Plane",
+      "transform": {
+        "position": [
+          5,
+          5,
+          5
+        ],
+        "scale": [
+          100,
+          100,
+          100
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/plane.obj",
+          "material_name": "Materials/woodfloor.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "Cowe",
+      "transform": {
+        "position": [
+          5,
+          5,
+          5
+        ],
+        "scale": [
+          0.7,
+          0.7,
+          0.7
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelComponent",
+          "model_name": "Models/basshon.glb",
+          "material_name": "Materials/Dawg.mtrl"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "Camera",
+      "transform": {
+        "position": [
+          0,
+          5,
+          -20
+        ]
+      },
+      "components": [
+        {
+          "type": "CameraComponent",
+          "fov": 45,
+          "near": 0.1,
+          "far": 100,
+          "speed": 4
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "name": "light",
+      "tag": "light",
+      "prototype": false,
+      "transform": {
+        "position": [
+          0,
+          2,
+          4
+        ]
+      },
+      "components": [
+        {
+          "type": "LightComponent",
+          "ambient": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "diffuse": [
+            1,
+            1,
+            1
+          ],
+          "specular": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

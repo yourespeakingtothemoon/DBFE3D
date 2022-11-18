@@ -65,7 +65,7 @@ int main(int argc, char** argv)
 	auto scene = std::make_unique<dbf::Scene>();
 
 	rapidjson::Document document;
-	bool success = dbf::json::Load("scenes/basic.scn", document);
+	bool success = dbf::json::Load("scenes/pixarvivi.scn", document);
 	if (!success)
 	{
 		LOG("error loading scene file %s.", "scenes/basic.scn");
@@ -91,10 +91,10 @@ int main(int argc, char** argv)
 		dbf::g_renderer.openFrame();
 
 		scene->draw(dbf::g_renderer);
-		scene->getActorByName("Drachen")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 90 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime };
-		scene->getActorByName("Cowe")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime, 30 * dbf::g_time.deltaTime };
+		//scene->getActorByName("Drachen")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 90 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime };
+		//scene->getActorByName("Cowe")->m_transform.rotation += glm::vec3{ 0 * dbf::g_time.deltaTime, 0 * dbf::g_time.deltaTime, 30 * dbf::g_time.deltaTime };
 		
-		scene->getActorByName("box")->m_transform.rotation += glm::vec3{dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime};
+		//scene->getActorByName("box")->m_transform.rotation += glm::vec3{dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime, dbf::randomf(-90,90) * dbf::g_time.deltaTime};
 		
 		
 		dbf::g_renderer.closeFrame();

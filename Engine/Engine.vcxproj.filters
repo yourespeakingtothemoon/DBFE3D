@@ -188,6 +188,12 @@
     <ClCompile Include="Framework\Components\CameraControl.cpp">
       <Filter>Source\Model\Framework\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\Components\LightComponent.cpp">
+      <Filter>Source\Model\Framework\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Utilities.cpp">
+      <Filter>Source\Controller\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathUtils.h">
@@ -357,6 +363,12 @@
     </ClInclude>
     <ClInclude Include="Framework\Components\CameraControl.h">
       <Filter>Source\Model\Framework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Components\LightComponent.h">
+      <Filter>Source\Model\Framework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Utilities.h">
+      <Filter>Source\Controller\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

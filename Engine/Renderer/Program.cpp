@@ -153,7 +153,7 @@ namespace dbf
 		if (uniform == m_uniforms.end())
 		{
 			// get uniform in program 
-			this->Use();
+			//this->Use();
 			//glUseProgram(m_program);
 			GLint location = glGetUniformLocation(m_program, name.c_str());
 			std::cout << location << std::endl;

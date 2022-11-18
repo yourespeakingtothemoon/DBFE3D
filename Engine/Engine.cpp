@@ -25,6 +25,7 @@ namespace dbf
 		REGISTER_CLASS(TilemapComponent);
 		REGISTER_CLASS(SpriteAnimComponent);
 		REGISTER_CLASS(CameraComponent);
+		REGISTER_CLASS(LightComponent);
 	}
 	void Engine::init()
 	{

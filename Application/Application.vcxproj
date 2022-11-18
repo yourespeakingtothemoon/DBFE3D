@@ -32,7 +32,10 @@
     <None Include="..\Build\Assets\Materials\Dawg.mtrl" />
     <None Include="..\Build\Assets\Materials\Drachen.mtrl" />
     <None Include="..\Build\Assets\Materials\Spot.mtrl" />
+    <None Include="..\Build\Assets\Materials\vivi.mtrl" />
+    <None Include="..\Build\Assets\Materials\woodfloor.mtrl" />
     <None Include="..\Build\Assets\Scenes\basic.scn" />
+    <None Include="..\Build\Assets\Scenes\pixarvivi.scn" />
     <None Include="..\Build\Assets\Shaders\basic.frag" />
     <None Include="..\Build\Assets\Shaders\basic.prog" />
     <None Include="..\Build\Assets\Shaders\basic.vert" />
