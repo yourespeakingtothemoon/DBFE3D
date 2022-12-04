@@ -25,6 +25,7 @@ namespace dbf
 	public:
 		std::shared_ptr<Model> m_model;
 		std::shared_ptr<Material> m_material;
+		bool depth_test = true;
 		
 	};
 }

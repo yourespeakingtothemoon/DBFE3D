@@ -26,6 +26,13 @@ namespace dbf
         m_projection = glm::perspective(glm::radians(fov), aspectRatio, near, far);
     }
 
+    void CameraComponent::SetProgram(std::shared_ptr<Program> prog)
+    {
+        prog->Use();
+        prog->SetUniform("view", m_view);
+        prog->SetUniform("projection", m_projection);
+    }
+    
     bool CameraComponent::write(const rapidjson::Value& value) const
     {
         return true;

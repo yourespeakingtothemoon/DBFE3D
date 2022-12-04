@@ -88,6 +88,17 @@ namespace dbf
 		SDL_RenderDrawPointF(m_renderer, v.x, v.y);
 	}
 
+	void Renderer::setViewport(int x, int y, int width, int height)
+	{
+		glViewport(x, y, width, height);
+	}
+
+	void Renderer::restoreViewport()
+	{
+		//glViewport(<x and y are 0 and use the class members width and height>);
+		glViewport(0, 0, width, height);
+	}
+
 	//void Renderer::draw(std::shared_ptr<Texture> texture, const Vector2& position, float angle, const Vector2& scale, const Vector2& registration)
 	//{
 

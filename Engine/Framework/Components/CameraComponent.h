@@ -3,6 +3,8 @@
 
 namespace dbf
 {
+
+	class Program;
 	class CameraComponent : public Component
 	{
 	public:
@@ -12,7 +14,7 @@ namespace dbf
 		virtual void update() override;
 
 		void SetPerspective(float fov, float aspectRatio, float near, float far);
-
+		void SetProgram(std::shared_ptr<Program> prog);
 		const glm::mat4& GetProjection() { return m_projection; }
 		const glm::mat4& GetView() { return m_view; }
 		virtual bool write(const rapidjson::Value& value) const override;

@@ -15,9 +15,9 @@ namespace dbf
 		m_material->Bind();
 		// set model view projection matrix for model 
 		m_material->GetProgram()->SetUniform("model", (glm::mat4)m_owner->m_transform);
-		m_material->GetProgram()->SetUniform("view", renderer.getView());
-		m_material->GetProgram()->SetUniform("projection", renderer.getProjection());
-
+		//m_material->GetProgram()->SetUniform("view", renderer.getView());
+		//m_material->GetProgram()->SetUniform("projection", renderer.getProjection());
+		glDepthMask(depth_test);
 		m_model->m_vertexBuffer.Draw();
 	}
 	bool ModelComponent::write(const rapidjson::Value& value) const

@@ -47,12 +47,23 @@ namespace dbf
 		const glm::mat4& getView() { return m_view; }
 		void setView(const glm::mat4& view) { m_view = view; }
 
+
+		void setViewport(int x, int y, int width, int height);
+		void restoreViewport();
+
 		const glm::mat4& getProjection() { return m_projection; }
 		void setProjection(const glm::mat4& projection) { m_projection = projection; }
 
 		friend class Text;
 		friend class Texture;
+		friend class GUI;
+	public:
+		glm::vec3 clear_color{ 0,0,0 };
+		glm::vec3 ambient_color{ 0,0,0 };
 
+		int width = 800;
+		int height = 800;
+		bool fs = false;
 	private:
 		int m_width = 0;
 		int m_height = 0;

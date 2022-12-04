@@ -1,6 +1,6 @@
 #pragma once
 #include "Actor.h"
-#include "Factory.h"
+#include "Resource/Resource.h"
 
 #include <list>
 #include <memory>
@@ -12,7 +12,7 @@ namespace dbf
 	class Renderer;
 	class Game;
 
-	class Scene : public GameObject, public ISerializable
+	class Scene : public GameObject, public ISerializable, public Resource
 	{
 	public:
 		Scene() = default;
@@ -20,11 +20,18 @@ namespace dbf
 		Scene(const Scene& other);
 		~Scene() = default;
 
+		virtual bool Create(std::string name, ...) override;
+
 		CLASS_DECLARATION(Scene)
 
 		void init() override;
 		void update() override;
-		void draw(Renderer& renderer);
+		//void draw(Renderer& renderer);
+
+		//replaces dbfe draw
+		void preRender(Renderer& renderer);
+		void render(Renderer& renderer);
+
 
 		virtual bool write(const rapidjson::Value& value) const override;
 		virtual bool read(const rapidjson::Value& value) override;

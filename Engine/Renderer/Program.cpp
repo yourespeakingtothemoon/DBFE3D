@@ -32,7 +32,7 @@ namespace dbf
 		if (!vertex_shader.empty())
 		{
 			auto vshader = g_resourceManager.Get<dbf::Shader>(vertex_shader, GL_VERTEX_SHADER);
-			LOG("Vert Shader added successfully");
+			//LOG("Vert Shader added successfully");
 			AddShader(vshader);
 		}
 

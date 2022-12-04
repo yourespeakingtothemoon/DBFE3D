@@ -22,6 +22,8 @@ namespace dbf
 		std::shared_ptr<T> Get(const std::string& name, TArgs... args);
 		template <typename T>
 		std::vector<std::shared_ptr<T>> Get();
+		template <typename T>
+		void Add(const std::string& name, std::shared_ptr<T> resource);
 
 	private:
 		std::map<std::string, std::shared_ptr<Resource>> m_resources;
@@ -64,5 +66,11 @@ namespace dbf
 		}
 
 		return result;
+	}
+	template<typename T>
+	inline void ResourceMgmt::Add(const std::string& name, std::shared_ptr<T> resource)
+	{
+		std::string lowerName = toLower(name);
+		m_resources[lowerName] = resource;
 	}
 }

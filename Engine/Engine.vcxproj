@@ -54,7 +54,10 @@
     <ClCompile Include="Math\Vector2.cpp" />
     <ClCompile Include="Physics\ContactListener.cpp" />
     <ClCompile Include="Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="Renderer\CubemapTexture.cpp" />
     <ClCompile Include="Renderer\Font.cpp" />
+    <ClCompile Include="Renderer\Framebuffer.cpp" />
+    <ClCompile Include="Renderer\GUI.cpp" />
     <ClCompile Include="Renderer\Material.cpp" />
     <ClCompile Include="Renderer\Model.cpp" />
     <ClCompile Include="Renderer\Program.cpp" />
@@ -112,7 +115,10 @@
     <ClInclude Include="Physics\Collision.h" />
     <ClInclude Include="Physics\ContactListener.h" />
     <ClInclude Include="Physics\PhysicsSystem.h" />
+    <ClInclude Include="Renderer\CubemapTexture.h" />
     <ClInclude Include="Renderer\Font.h" />
+    <ClInclude Include="Renderer\Framebuffer.h" />
+    <ClInclude Include="Renderer\GUI.h" />
     <ClInclude Include="Renderer\Material.h" />
     <ClInclude Include="Renderer\Model.h" />
     <ClInclude Include="Renderer\Program.h" />
@@ -201,7 +207,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir);$(SolutionDir)ThirdParty\imgui</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -222,7 +228,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir);$(SolutionDir)ThirdParty\imgui</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -243,7 +249,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir);$(SolutionDir)ThirdParty\imgui</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -266,7 +272,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdParty\glm;$(SolutionDir)ThirdParty\glad\include;$(SolutionDir)ThirdParty\SDL2-2.0.22\include;$(SolutionDir)ThirdParty\fMod\core\inc;$(SolutionDir)ThirdParty\rapidJSON\include;$(SolutionDir)ThirdParty\assimp\include;$(SolutionDir)ThirdParty\box2D\include;$(ProjectDir);$(SolutionDir)ThirdParty\imgui</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>

@@ -42,14 +42,14 @@ namespace dbf
 
     Rectangle& SpriteAnimComponent::GetSource()
     {
-        // calculate sequence source rect
-        Vector2 cellSize = m_sequence->texture->getSize() / Vector2{ m_sequence->num_columns, m_sequence->num_rows };
+       /* // calculate sequence source rect
+        Vector2 cellSize = //m_sequence->texture->getSize(); / Vector2{ m_sequence->num_columns, m_sequence->num_rows };
         int column = (frame - 1) % m_sequence->num_columns;
         int row = (frame - 1) / m_sequence->num_columns;
         source.x = (int)(column * cellSize.x);
         source.y = (int)(row * cellSize.y);
         source.w = (int)(cellSize.x);
-        source.h = (int)(cellSize.y);
+        source.h = (int)(cellSize.y);*/
         return source;
     }
 
