@@ -66,7 +66,7 @@ namespace dbf
 	extern TimeMgmt g_time;
 	extern AudioSystem g_audioSystem;
 	//extern GUI g_gui;
-	extern Scene g_scene;
+	
 	extern ResourceMgmt g_resourceManager;
 	extern PhysicsSystem g_physicsSystem;
 	extern EventMgmt g_eventManager;
