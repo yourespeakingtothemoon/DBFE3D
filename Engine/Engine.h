@@ -49,6 +49,7 @@
 #include "Renderer/VertexBuffer.h"
 #include "Renderer/CubemapTexture.h"
 #include "Renderer/Framebuffer.h"
+//#include "Renderer/GUI.h"
 
 
 #include <memory>
@@ -64,6 +65,8 @@ namespace dbf
 	extern Renderer g_renderer;
 	extern TimeMgmt g_time;
 	extern AudioSystem g_audioSystem;
+	//extern GUI g_gui;
+	extern Scene g_scene;
 	extern ResourceMgmt g_resourceManager;
 	extern PhysicsSystem g_physicsSystem;
 	extern EventMgmt g_eventManager;

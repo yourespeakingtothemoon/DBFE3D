@@ -5,6 +5,8 @@ namespace dbf
 	InpSystem g_inputSystem;
 	Renderer g_renderer;
 	TimeMgmt g_time;
+	GUI g_gui;
+	Scene g_scene;
 	AudioSystem g_audioSystem;
 	ResourceMgmt g_resourceManager;
 	PhysicsSystem g_physicsSystem;
@@ -39,6 +41,8 @@ namespace dbf
 
 	void Engine::update()
 	{
+		SDL_Event event;
+		while (SDL_PollEvent(&event)) {g_gui.update(event);}
 		g_time.gameTick();
 		g_eventManager.update();
 		g_physicsSystem.update();
@@ -53,9 +57,11 @@ namespace dbf
 		g_eventManager.shutdown();
 		g_physicsSystem.shutdown();
 		g_resourceManager.shutdown();
+		g_gui.shutdown();
 		g_inputSystem.shutdown();
 		g_audioSystem.shutdown();
 		g_renderer.shutdown();
+		
 	}
 
 }
