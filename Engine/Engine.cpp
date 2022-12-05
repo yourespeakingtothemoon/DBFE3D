@@ -5,7 +5,7 @@ namespace dbf
 	InpSystem g_inputSystem;
 	Renderer g_renderer;
 	TimeMgmt g_time;
-	GUI g_gui;
+	//GUI g_gui;
 	Scene g_scene;
 	AudioSystem g_audioSystem;
 	ResourceMgmt g_resourceManager;
