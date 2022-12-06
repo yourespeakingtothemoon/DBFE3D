@@ -84,6 +84,8 @@ int main(int argc, char** argv)
 	//std::shared_ptr<dbf::Scene> scene = dbf::g_resourceManager.Get<dbf::Scene>("Scenes/basic.scn");
 	auto scene = std::make_unique<dbf::Scene>();
 
+	scene->init();
+
 	rapidjson::Document document;
 	bool success = dbf::json::Load("scenes/basic.scn", document);
 	//bool success = dbf::json::Load("scenes/pixarvivi.scn", document);
@@ -103,16 +105,16 @@ int main(int argc, char** argv)
 		dbf::Engine::instance().update();
 		if (dbf::g_inputSystem.queryKeyState(dbf::key_escape) == dbf::InpSystem::keyState::Pressed) quit = true;
 		//update scene
-		//scene->update();
+		scene->update();
 
 		dbf::g_renderer.openFrame();
-		//scene->preRender(dbf::g_renderer);
-		//scene->render(dbf::g_renderer);
+		scene->preRender(dbf::g_renderer);
+		scene->render(dbf::g_renderer);
 
 		dbf::g_renderer.closeFrame();
 		
 	}
-	//scene->RemoveAll();
+	scene->RemoveAll();
 	dbf::Engine::instance().shutdown();
 
 	return 0;

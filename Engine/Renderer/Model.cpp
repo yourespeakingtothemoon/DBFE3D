@@ -7,15 +7,15 @@ namespace dbf
     {
         Assimp::Importer importer;
 
-        const aiScene* scene = importer.ReadFile(filename, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
+        const aiScene* scene2 = importer.ReadFile(filename, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
 
-        if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
+        if (!scene2 || scene2->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene2->mRootNode)
         {
             LOG("error loading assimp file %s", importer.GetErrorString());
             return false;
         }
 
-        ProcessNode(scene->mRootNode, scene);
+        ProcessNode(scene2->mRootNode, scene2);
 
         return true;
     }

@@ -26,7 +26,6 @@ namespace dbf
 	{
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplSDL2_NewFrame();
-		//ImGui_ImplSDL2_NewFrame(renderer.m_window);
 		ImGui::NewFrame();
 	}
 
